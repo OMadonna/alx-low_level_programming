@@ -10,11 +10,7 @@ void rev_string(char *s)
 
 	if (*s != '\0')
 	{
-		/* Find the length of the string */
 		for (i = 0; s[i] != '\0'; i++)
-			;
-
-		/* Swap characters from both ends until the middle */
 		for (i = 0, j = i; i < j; i++, j--)
 		{
 			temp = s[i];
@@ -22,4 +18,5 @@ void rev_string(char *s)
 			s[j] = temp;
 		}
 	}
+
 }
