@@ -5,18 +5,30 @@
  */
 void rev_string(char *s)
 {
-	int i, j;
+	int length = 0;
+	int start = 0;
+	int end = 0;
 	char temp;
 
 	if (*s != '\0')
 	{
-		for (i = 0; s[i] != '\0'; i++)
-		for (i = 0, j = i; i < j; i++, j--)
+		/* Calculate the length of the string */
+		while (s[length] != '\0')
+			length++;
+
+		end = length - 1;
+
+		/* Reverse the string by swapping characters */
+		while (start < end)
 		{
-			temp = s[i];
-			s[i] = s[j];
-			s[j] = temp;
+			/* Swap characters */
+			temp = s[start];
+			s[start] = s[end];
+			s[end] = temp;
+
+			/* Move to the next pair of characters */
+			start++;
+			end--;
 		}
 	}
-
 }
