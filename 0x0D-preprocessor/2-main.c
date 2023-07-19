@@ -4,7 +4,7 @@
  * followed by a new line
  * Return int
  */
-int main()
+int main(void)
 {
 	printf("Name of source file: %s\n", __FILE__);
 
